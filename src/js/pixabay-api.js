@@ -18,12 +18,14 @@ export function getImage(inputValue) {
         orientation: 'horisontal',
         safesearch: 'true',
     });
+
     const url = `${BASE_URL}${END_POINT}?${params}`;
-    return fetch(url).then(res => {
-        if (!res.ok) {
+
+    return fetch(url).then(response => {
+        if (!response.ok) {
             throw new Error(response.status);
         }
-        return res.json();
+        return response.json();
     })
 }
 

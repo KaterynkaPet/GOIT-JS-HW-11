@@ -24,8 +24,8 @@ formEl.addEventListener('submit', e => {
     imgGallery.innerHTML = '<div class="loader"></div>';
 
     getImage(inputValue).then(data => {
-        const marcup = imageTemplate(data.hits);
-        imgGallery.innerHTML = marcup;
+        const markup = imageTemplate(data.hits);
+        imgGallery.innerHTML = markup;
         lightbox.refresh();
         if (data.hits.length === 0) {
             iziToast.error({
@@ -47,10 +47,7 @@ formEl.addEventListener('submit', e => {
 
             })
         })
-        .finally(() => {
-            formEl.requestFullscreen()
-        })
-
+       
 });
 
 
