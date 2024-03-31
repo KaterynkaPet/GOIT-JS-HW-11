@@ -6,7 +6,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 import { imgGallery } from '../main';
 
-export const imageTemplate = (images) => {
+export function imageTemplate(images) {
+    imgGallery.innerHTML = '';
+    
     return images.map(image =>
         `<li class="gallery-item">
         <a class="gallery-link" href ="${image.largeImageURL}">

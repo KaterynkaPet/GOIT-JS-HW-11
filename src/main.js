@@ -8,7 +8,6 @@ import { getImage } from './js/pixabay-api';
 import { imageTemplate } from './js/render-functions';
 
 export const imgGallery = document.querySelector('.gallery');
-
 export const formEl = document.querySelector('.form');
 
 const galleryCfg = {

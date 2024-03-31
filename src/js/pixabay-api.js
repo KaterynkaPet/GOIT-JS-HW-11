@@ -26,7 +26,7 @@ export function getImage(inputValue) {
             throw new Error(response.status);
         }
         return response.json();
-    })
+    });
 }
 
  
